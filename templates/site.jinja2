@@ -1,0 +1,8 @@
+server {
+  listen 80;
+  server_name web.local;
+  access_log /var/log/nginx/web.local.access.log;
+  error_log /var/log/nginx/web.local.error.log;
+
+  root {{ HOME }}/www;
+}
