@@ -27,6 +27,10 @@
       lineinfile: dest=/etc/hosts
                   regexp='^127\.0\.0\.1' line='127.0.0.1 web.local'
 
+    - name: Start nginx
+      command: nginx
+      become: yes
+
     - name: Restart Nginx
       command: nginx -s reload
       become: yes
